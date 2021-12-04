@@ -18,7 +18,57 @@ class Producto {
     }
 }
 
+//Variables globales
+
+
+let botonesCompras = document.querySelectorAll(".botonCompra");
 let arrayProductos = [];
+
+
+
+for( let boton of botonesCompras){
+
+    boton.addEventListener("click" , agregarCarrito);
+
+}
+
+console.log(botonesCompras);
+
+function agregarCarrito (e) {
+
+
+    console.log(e.target);
+    let prod = e.target;
+    let produ = prod.parentNode.parentNode;
+    let titulo = produ.querySelector("h5").textContent;
+    let parrafo = produ.querySelector("p").textContent;
+    let imagen = produ.querySelector("img").src;
+
+    let productos = {
+        nombre: titulo,
+        texto: parrafo,
+        img: imagen,
+    };
+
+    arrayProductos.push(productos);
+    console.log(produ);
+    console.log(titulo);
+
+
+    for (let Producto of arrayProductos) {
+        let contenedor = document.createElement("p");
+        //Inner
+        contenedor.innerHTML = `<h5> Nombre: ${Producto.nombre}</h5>
+                                <p> Precio: ${Producto.precio} </p>
+                                <p> Cantidad: ${Producto.cantidad} </p>`;
+   
+        document.body.appendChild (contenedor);
+    }
+
+
+}
+
+/* let arrayProductos = [];
 let product = 0 ; 
 
 do {
@@ -49,3 +99,4 @@ for (let Producto of arrayProductos) {
     document.body.appendChild (contenedor); 
 }
 
+ */
