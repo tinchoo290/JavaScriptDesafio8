@@ -26,66 +26,84 @@
     <h1>Alumno Martin Miguel Perez</h1>
     <h1>NUESTROS PRODUCTOS</h1>
 
-    <!-- INICIO TABLA DE PRODUCTOS -->
-    <div class="tabla-calculo" id="tabla-calculo">
-        <table class="tabla">
-            <caption class="titulo-tabla">Productos en el carrito</caption>
-            <thead class="cabecera border-top-right">
-                <tr>
-                    <th class="border-top-left">Nombre Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th class="border-top-right">Precio Total</th>
-                </tr>
-            </thead>
-            <tbody id="carrito-body">
-            </tbody>
-            <tfoot id="footer">
-                <tr>
-                    <td class="border-bottom-left border-bottom-right" colspan=4>¡No hay ningún elemento en el carrito!
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Producto 4</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary botonCompra">Comprar</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Prducto 5</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary botonCompra">Comprar</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Producto 6</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary botonCompra">Comprar</a>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
+     <!-- CARD DE PRODUCTOS -->
+     <div class="contenedor-productos">
+     </div>
 
 
+
+ <!-- INICIO TABLA DE PRODUCTOS -->
+ <div class="tabla-calculo" id="tabla-calculo">
+    <table class="tabla">
+        <caption class="titulo-tabla"></caption>
+        <thead class="cabecera border-top-right">
+            <tr>
+                <th class="border-top-left">Nombre Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th class="border-top-right">Precio Total</th>
+            </tr>
+        </thead>
+        <tbody id="carrito-body">
+        </tbody>
+        <tfoot id="footer">
+            <tr>
+                <td class="border-bottom-left border-bottom-right" colspan=4>¡No hay ningún elemento en el carrito!
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<!-- FIN TABLA DE PRODUCTOS -->
+
+<!-- FOOTER DE LA TABLA -->
+<template id="tfooter">
+    <tr class="none">
+        <td colspan=2 class="border-bottom-left"><button id="vaciar-tabla" class="button">Limpiar carrito</button>
+        </td>
+        <td class="negrita">Precio Total</td>
+        <td id="total-a-pagar" class="precio-tabla border-bottom-right negrita">5.00</td>
+    </tr>
+</template>
+
+
+<!-- TEMPLATE DE LAS FILAS -->
+<template id="agregar-producto-al-carro">
+    <tr>
+        <td id="producto">Chicken Burger</td>
+        <td><button id="menos-cantidad" class="button">-</button><span id="cant">1</span><button id='mas-cantidad'
+                class="button">+</button></td>
+        <td class="precio-tabla" id="precio-uni">3.50</td>
+        <td class="precio-tabla" id="precio-total-prod">3.50</td>
+    </tr>
+</template>
+
+
+<!-- TEMPLATE DEL PRODUCTO -->
+<template id="template-prod">
+    <article class="cartola">
+
+        <!-- IMG DEL PROD -->
+        <div class="contenedor-img">
+            <img src="" alt="">
+        </div>
+
+        <!-- NOMBRE Y DESCRIP DEL PROD -->
+        <div class="div-info">
+            <h2 class="nombre-prod">Nombre Producto</h2>
+            <hr class="separador">
+            <p class="descripcion-prod">Descripción producto</p>
+        </div>
+
+        <!-- PRECIO Y AGREGAR AL CARRITO -->
+        <div class="div-precio-boton">
+            <p class="precio">precio Producto</p>
+            <button class="boton">Agregar</button>
+        </div>
+    </article>
+</template>
     <!-- FIN TABLA DE PRODUCTOS -->
-    <script src="java.js"></script>
+  <script src="java.js"></script>  
 </body>
 
 </html>

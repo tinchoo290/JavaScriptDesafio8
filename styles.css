@@ -8,7 +8,7 @@ body {
     box-sizing: border-box;
     text-align: justify; 
     font-family: Optima, sans-serif;
-    --border: 1px solid #35532f;
+    --border: 1px solid #53522f;
 
     background-image: radial-gradient(circle, #2e8334, #1f8426, #19801f, #127d18, #115f16);
   }
@@ -81,6 +81,9 @@ body {
     background: transparent;
     border: none;
   }
+
+
+  
   
   
   /* DESDE AQUI EMPIEZA LA SECCIÓN DE LOS PRODUCTOS */
